@@ -11,3 +11,6 @@
       
       PATH="$PATH:~"user"/caminhoDoRepositório"
     Após salvar os scripts poderão ser executados em qualquer repositório via bash !
+
+### Para Executar os scripts
+    chmod +x *.sh 

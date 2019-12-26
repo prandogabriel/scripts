@@ -2,12 +2,12 @@
 
 #########################################################################
 # 									                                    
-# Compila.sh - compilar TAD e executar           			            
+# compilaTAD.sh - compilar TAD e executar           			            
 #									                                    
 # Autor: Gabriel Prando (gprando55@gmail.com)                          	
 # Data Criação: 26/12/2019				                        		
 #									                                    
-# Descrição: Script para compilar TAD em C e execuar                 	
+# Descrição: Script para compilar TAD em C e executar                 	
 #	     passando o nome do arquivo das funções e o usa_arquivo .c      
 #                       como parêmetro	                                
 #	                                                                										                                    #

@@ -2,12 +2,12 @@
 
 #########################################################################
 # 									                                    
-# Compila.sh - compilar e executar arquivo em C 			            
+# compila.sh - compilar e executar arquivo em C 			            
 #									                                    
 # Autor: Gabriel Prando (gprando55@gmail.com)                          	
 # Data Criação: 26/12/2019				                        		
 #									                                    
-# Descrição: Script para compilar arquivo C e execuar                 	
+# Descrição: Script para compilar arquivo C e executar                 	
 #	     passando o nome do arquivo .c como parêmetro	                
 #	                                                                	
 #									                                    

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# parâmetros,  $0 nome do programa, $# qtde de parâmetros
+# $* todos os parâmetros inseridos, $1-9 cada parâmetro
+#
 #########################################################################
 # 									                                    
 # newAPIRest.sh - Criar novo projeto de API Rest em nodeJs           			            
@@ -15,8 +18,3 @@
 #				usar dentro da pasto onde queira que clone o projeto novo			                                    
 #########################################################################
 
-######################################## 
-#
-#       EM BREVE
-#
-#######################################

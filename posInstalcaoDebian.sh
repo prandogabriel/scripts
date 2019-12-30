@@ -2,6 +2,8 @@
 
 ###############          SCRIPT POS INTALAÇÃO DEBIAN 10     ############
 # 									                                    
+# Adaptação script pos installation by Vinicius Tartari https://github.com/ViniciusTartari/tartariworkstation/blob/master/tartariworkstationD10.sh
+#
 # posInstalacaoDebian.sh -            			            
 #									                                    
 # Autor: Gabriel Prando (gprando55@gmail.com)                          	

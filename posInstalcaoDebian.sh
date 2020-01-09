@@ -131,6 +131,7 @@ sudo snap install node-red
 sudo snap install snap-store
 sudo snap install spotify
 sudo snap install photogimp
+sudo snap install postbird
 
 ## ----------------------------------------------------------------------
 

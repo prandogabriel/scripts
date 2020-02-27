@@ -20,3 +20,4 @@
     nomeScript.sh 
       
   em qualquer pasta.
+

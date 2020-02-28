@@ -4,7 +4,7 @@
 # 									                                    
 # Adaptação script pos installation by Vinicius Tartari https://github.com/ViniciusTartari/tartariworkstation/blob/master/tartariworkstationD10.sh
 #
-# posInstalacaoDebian.sh -            			            
+# posInstalacaoNotebook.sh -            			            
 #									                                    
 # Autor: Gabriel Prando (gprando55@gmail.com)                          	
 # Data Criação: 28/12/2019				                        		
@@ -12,7 +12,7 @@
 # Descrição: instalar todos os programas e softwares necessários no Debian 10                	
 #	     pós formatação	                                
 #	                                                                										                                    #
-# Exemplo de uso: sudo ./posInstalacaoDebian.sh	nome e-mail         		
+# Exemplo de uso: sudo ./posInstalacaoDebian.sh	         		
 #							                                    
 #########################################################################
 
@@ -107,8 +107,8 @@ echo -e "\033[01;32mGcc, git, build-essential and others\033[0m"
 sudo apt install gcc git build-essential filezilla gimp gparted htop inkscape kate virtualbox-6.0 typora vlc yarn libavcodec-extra -y
 
 ## Configurando git
-git config --global user.name $1
-git config --global user.email $2
+git config --global user.name "Gabriel Prando"
+git config --global user.email "gprando55@gmail.com"
 git config --global color.ui true
 ## ----------------------------------------------------------------------
 

@@ -8,7 +8,7 @@
 # Descrição: drive para TL-WN725N funcionar no debian	                                
 #	                                                                										                                    #
 # Exemplo de uso: sudo ./driver_wifi.sh         		
-#							                                    
+# 							                                    
 ##################################################################################################################
 
 echo -e "\033[01;32m Install drives TL-WN725N - TP LINK 10\033[0m" 
@@ -39,7 +39,8 @@ echo -e "\033[01;32m install \033[0m"
 make all
 make install
 ## INSTALAR ##
+
 echo -e "\033[01;32;40mTHE END!\033[0m"
 
-echo -e "\033[01;33mRestart now? (y/n) \033[0m" && read x && [[ "$x" == "y" ]] && /sbin/reboot
+sudo reboot
 

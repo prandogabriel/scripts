@@ -17,15 +17,15 @@
 # VERDE - echo -e "\033[01;32m  \033[0m"
 # AMARELO - echo -e "\033[01;33m \033[0m"
 
-echo -e "\033[01;32mDracula Theme Terminal\033[0m"
+# echo -e "\033[01;32mDracula Theme Terminal\033[0m"
 
-sudo apt-get install dconf-cli
+# sudo apt-get install dconf-cli
 
-git clone https://github.com/dracula/gnome-terminal
+# git clone https://github.com/dracula/gnome-terminal
 
-cd gnome-terminal
+# cd gnome-terminal
 
-./install.sh
+# ./install.sh
 
 sudo apt install zsh
 

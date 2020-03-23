@@ -40,15 +40,16 @@ echo -e "\033[01;32mInstall jdk \033[0m"
 sudo apt-get install default-jdk
 ## -------jdk-------
 
-## --------cURL------
-echo -e "\033[01;32mInstall cURL\033[0m"
-sudo apt install curl
-## -------/cURL------
+## -------node-------
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
+apt-get install -y nodejs
+## -------node-------
 
 ## -------Yarn--------
 echo -e "\033[01;32mYarn\033[0m"
 curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
 ## -------/Yarn-------
 
 ## -------Docker-------
@@ -67,21 +68,8 @@ echo -e "\033[01;32mDocker and dependencies\033[0m"
 sudo apt install docker-ce docker-ce-cli containerd.io -y
 
 # Programas
-echo -e "\033[01;32mGcc, git, yarn\033[0m"
-sudo apt install gcc git yarn
-
-## Configurando git
-echo -e "\033[01;32mConfig Git\033[0m"
-git config --global user.name Prando
-git config --global user.email gprando55@gmail.com
-git config --global color.ui true
-## ----------------------------------------------------------------------
-
-
-## Instalando DBs com docker
-echo -e "\033[01;32mInstalling mongoDB and MySQL on Docker\033[0m"
-sudo docker pull mongo
-sudo docker pull mysql
+echo -e "\033[01;32mGcc\033[0m"
+sudo apt install gcc 
 
 ## ----------------------------------------------------------------------
 

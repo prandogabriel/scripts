@@ -69,7 +69,7 @@ sudo apt install docker-ce docker-ce-cli containerd.io -y
 
 # Programas
 echo -e "\033[01;32mGcc\033[0m"
-sudo apt install gcc 
+sudo apt install gcc npm
 
 ## ----------------------------------------------------------------------
 

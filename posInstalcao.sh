@@ -103,8 +103,8 @@ echo -e "\033[01;32mDocker and dependencies\033[0m"
 sudo apt install docker-ce docker-ce-cli containerd.io -y
 
 # Programas
-echo -e "\033[01;32mGcc, git, build-essential and others\033[0m"
-sudo apt install gcc git build-essential filezilla gimp gparted htop inkscape kate virtualbox-6.0 typora vlc yarn libavcodec-extra npm -y
+echo -e "\033[01;32mGcc, git, github cli, build-essential and others\033[0m"
+sudo apt install gcc git hub build-essential filezilla gimp gparted htop inkscape kate virtualbox-6.0 typora vlc yarn libavcodec-extra npm -y
 
 ## Configurando git
 git config --global user.name "Gabriel Prando"

@@ -68,8 +68,8 @@ echo -e "\033[01;32mDocker and dependencies\033[0m"
 sudo apt install docker-ce docker-ce-cli containerd.io -y
 
 # Programas
-echo -e "\033[01;32mGcc\033[0m"
-sudo apt install gcc npm
+echo -e "\033[01;32mGcc, gcc , github Cli\033[0m"
+sudo apt install gcc npm hub
 
 ## ----------------------------------------------------------------------
 

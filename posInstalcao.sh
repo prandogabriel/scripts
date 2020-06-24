@@ -104,7 +104,7 @@ sudo apt install docker-ce docker-ce-cli containerd.io -y
 
 # Programas
 echo -e "\033[01;32mGcc, git, github cli, build-essential and others\033[0m"
-sudo apt install gcc git hub build-essential filezilla gimp gparted htop inkscape kate virtualbox-6.0 typora vlc yarn libavcodec-extra npm -y
+sudo apt install clang cppcheck gcc git hub build-essential filezilla gimp gparted htop inkscape kate virtualbox-6.0 typora vlc yarn libavcodec-extra npm -y
 
 ## Configurando git
 git config --global user.name "Gabriel Prando"
@@ -132,6 +132,8 @@ sudo snap install snap-store
 sudo snap install spotify
 sudo snap install photogimp
 sudo snap install postbird
+sudo snap install dbeaver-ce
+sudo snap install peek
 
 ## ----------------------------------------------------------------------
 

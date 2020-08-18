@@ -35,11 +35,6 @@ sudo apt-add-repository non-free
 echo -e "\033[01;32mRunning the apt update\033[0m" 
 sudo apt update
 
-## -------jdk-------
-echo -e "\033[01;32mInstall jdk \033[0m" 
-sudo apt-get install default-jdk
-## -------jdk-------
-
 
 ## Adicionando repositórios de terceiros e suporte a Snap ##
 echo -e "\033[01;32mAdd third party repositories\033[0m"
@@ -48,14 +43,8 @@ echo -e "\033[01;32mAdd third party repositories\033[0m"
 echo -e "\033[01;32mWine\033[0m"
 wget -nc https://dl.winehq.org/wine-builds/winehq.key 
 sudo apt-key add winehq.key 
-sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/debian/ buster main' -y
+sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu buster main' -y
 ## -------/Wine------
-
-## -------VirtualBox-------
-echo -e "\033[01;32mVirtual Box\033[0m"
-echo "deb https://download.virtualbox.org/virtualbox/debian buster contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
-wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-## -------/VirtualBox------
 
 ## -------Typora-------
 echo -e "\033[01;32mTypora\033[0m"
@@ -65,7 +54,7 @@ sudo add-apt-repository 'deb https://typora.io/linux ./' -y
 
 ## --------cURL------
 echo -e "\033[01;32mInstall cURL\033[0m"
-sudo apt install curl
+sudo apt install curl -y
 ## -------/cURL------
 
 ## -------Yarn--------
@@ -76,14 +65,14 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 
 ## -------Docker-------
 echo -e "\033[01;32mDocker\033[0m"
-sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" -y
+sudo apt-get install apt-transport-https ca-certificates gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" -y
 ## -------/Docker------
 
 ## Atualizando o repositório depois da adição de novos repositórios ##
 echo -e "\033[01;32mRunning apt update after additions\033[0m"
-sudo apt update
+sudo apt update -y
 
 ## Programas do repositório APT##
 echo -e "\033[01;32mInstalling programs via APT\033[0m"
@@ -98,17 +87,27 @@ sudo apt install --install-recommends winehq-stable wine-stable wine-stable-i386
 
 # Docker
 echo -e "\033[01;32mDocker and dependencies\033[0m"
-sudo apt install docker-ce docker-ce-cli containerd.io -y
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+
+sudo groupadd docker
 
 # Programas
 echo -e "\033[01;32mGcc, git, github cli, build-essential and others\033[0m"
-sudo apt install clang cppcheck gcc git hub build-essential filezilla gimp gparted htop inkscape kate virtualbox-6.0 typora vlc yarn libavcodec-extra npm -y
+sudo apt install clang cppcheck gcc hub build-essential filezilla gimp gparted htop inkscape typora vlc yarn libavcodec-extra -y
+
+
+sudo apt update -y
+
+sudo apt install git -y
 
 ## Configurando git
 git config --global user.name "Gabriel Prando"
 git config --global user.email "gprando55@gmail.com"
 git config --global color.ui true
 ## ----------------------------------------------------------------------
+
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 ## Instalando pacotes Snap ##
 echo -e "\033[01;32mInstalling snap packages\033[0m"
@@ -120,7 +119,6 @@ sudo snap install audacity
 sudo snap install discord
 sudo snap install robo3t-snap
 sudo snap install go --classic
-sudo snap install node --classic
 sudo snap install code --classic
 sudo snap install heroku --classic
 sudo snap install gitkraken
@@ -134,6 +132,47 @@ sudo snap install dbeaver-ce
 sudo snap install peek
 
 ## ----------------------------------------------------------------------
+
+echo -e "\033[01;32mFont fira code\033[0m"
+sudo apt install fonts-firacode
+
+
+## -------/Java_8------
+echo -e "\033[01;32mInstall jdk 8\033[0m"
+sudo add-apt-repository ppa:openjdk-r/ppa -y
+sudo apt-get update -y
+sudo apt-get install openjdk-8-jdk -y
+## -------/Java_8------
+
+# config para o android studio
+echo -e "\033[01;32mAndroid studio\033[0m"
+sudo apt-get install gcc-multilib lib32z1 lib32stdc++6
+
+
+# Install hyper terminal
+echo -e "\033[01;32mHyper terminal\033[0m"
+wget https://releases.hyper.is/download/deb
+sudo dpkg -i deb
+sudo rm -rf deb
+# setar como padrão
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /opt/Hyper/hyper 50
+
+# plugin para bolinhas coloridas
+hyper install hyper-custom-controls
+
+mkdir ~/.hyper_plugins/local/hyper-omni
+
+git clone https://github.com/getomni/hyper-omni ~/.hyper_plugins/local/hyper-omni
+# Install hyper terminal
+
+# ZSH
+echo -e "\033[01;32mZSH\033[0m"
+sudo apt install zsh -y
+
+echo -e "\033[01;32moh my zsh\033[0m"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" 
 
 ## Finalização, atualização e limpeza##
 echo -e "\033[01;32mFinish the installations\033[0m"

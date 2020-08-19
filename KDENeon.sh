@@ -180,5 +180,6 @@ echo -e "\033[01;32mUpdating and cleaning system\033[0m"
 sudo apt update && sudo apt dist-upgrade -y
 sudo apt autoclean 
 sudo apt autoremove -y
+## Finalização, atualização e limpeza##
 
 echo -e "\033[01;32;40mTHE END!\033[0m"

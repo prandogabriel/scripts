@@ -48,15 +48,13 @@ git clone https://github.com/getomni/hyper-omni ~/.hyper_plugins/local/hyper-omn
 echo -e "\033[01;32mZSH\033[0m"
 sudo apt install zsh -y
 
-sudo usermod --shell $(which zsh) $USER
-sudo usermod --shell $(which zsh) root
-
 
 echo -e "\033[01;32moh my zsh\033[0m"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
 
-# install gerenciadro de plugins
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" 
+# install gerenciador de plugins
+echo -e "\033[01;32install zinit\033[0m"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" -n
 
 
 # para volatar aparecer os softwares do snap

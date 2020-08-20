@@ -12,7 +12,7 @@
 # Descrição: instalar todos os programas e softwares necessários no Debian 10                	
 #	     pós formatação	                                
 #	                                                                										                                    #
-# Exemplo de uso: sudo ./posInstalacaoDebian.sh	         		
+# Exemplo de uso: sudo ./debian10.sh	         		
 #							                                    
 #########################################################################
 

@@ -1,21 +1,21 @@
 #!/bin/bash
 
-###############          SCRIPT POS INTALAÇÃO DEBIAN 10     ############
+###############          SCRIPT PÓS INTALAÇÃO KDE NEON    ############
 # 									                                    
 # posInstalacaoNotebook.sh -            			            
 #									                                    
 # Autor: Gabriel Prando (gprando55@gmail.com)                          	
-# Data Criação: 28/12/2019				                        		
+# Data Criação: 17/08/2020				                        		
 #									                                    
-# Descrição: instalar todos os programas e softwares necessários no Debian 10                	
+# Descrição: instalar todos os programas e softwares necessários no kde neon               	
 #	     pós formatação	                                
 #	                                                                										 
-# Exemplo de uso: sudo ./posInstalacaoDebian.sh	         		
+# Exemplo de uso: sudo ./KDENeon.sh	         		
 #							                                    
 #########################################################################
 
 
-echo -e "\033[01;32m pos-installation script - Debian 10\033[0m" 
+echo -e "\033[01;32m pos-installation script - KDE Neon 10\033[0m" 
 
 ## ----------------------------------------------------------------------
 ## Removendo travas eventuais do apt ##

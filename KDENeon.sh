@@ -26,11 +26,6 @@ sudo rm /var/lib/dpkg/lock-frontend; sudo rm /var/cache/apt/archives/lock ;
 echo -e "\033[01;32mAdd 32 bits architecture to dpkg\033[0m" 
 sudo dpkg --add-architecture i386 
 
-## Add non-free to official repositories
-echo -e "\033[01;32mAdd contrib and non-free to official repositories\033[0m" 
-sudo apt-add-repository contrib
-sudo apt-add-repository non-free
-
 ## Atualizando o repositório ##
 echo -e "\033[01;32mRunning the apt update\033[0m" 
 sudo apt update
@@ -38,13 +33,6 @@ sudo apt update
 
 ## Adicionando repositórios de terceiros e suporte a Snap ##
 echo -e "\033[01;32mAdd third party repositories\033[0m"
-
-## -------Wine-------
-echo -e "\033[01;32mWine\033[0m"
-wget -nc https://dl.winehq.org/wine-builds/winehq.key 
-sudo apt-key add winehq.key 
-sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu buster main' -y
-## -------/Wine------
 
 ## -------Typora-------
 echo -e "\033[01;32mTypora\033[0m"
@@ -80,10 +68,6 @@ echo -e "\033[01;32mInstalling programs via APT\033[0m"
 ## Snap
 echo -e "\033[01;32mSnap\033[0m"
 sudo apt install snapd -y
-
-# Wine
-echo -e "\033[01;32mWine and dependencies\033[0m"
-sudo apt install --install-recommends winehq-stable wine-stable wine-stable-i386 wine-stable-amd64 -y
 
 # Docker
 echo -e "\033[01;32mDocker and dependencies\033[0m"
@@ -134,7 +118,7 @@ sudo snap install peek
 ## ----------------------------------------------------------------------
 
 echo -e "\033[01;32mFont fira code\033[0m"
-sudo apt install fonts-firacode
+sudo apt install fonts-firacode -y
 
 
 ## -------/Java_8------
@@ -146,7 +130,7 @@ sudo apt-get install openjdk-8-jdk -y
 
 # config para o android studio
 echo -e "\033[01;32mAndroid studio\033[0m"
-sudo apt-get install gcc-multilib lib32z1 lib32stdc++6
+sudo apt-get install gcc-multilib lib32z1 lib32stdc++6 -y
 
 
 ## Finalização, atualização e limpeza##

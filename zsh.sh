@@ -27,26 +27,46 @@
 
 # ./install.sh
 
-sudo apt install zsh
 
+# Install hyper terminal
+echo -e "\033[01;32mHyper terminal\033[0m"
+wget https://releases.hyper.is/download/deb
+sudo dpkg -i deb
+sudo rm -rf deb
+# setar como padrão
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /opt/Hyper/hyper 50
+
+# plugin para bolinhas coloridas
+hyper install hyper-custom-controls
+
+mkdir ~/.hyper_plugins/local/hyper-omni
+
+git clone https://github.com/getomni/hyper-omni ~/.hyper_plugins/local/hyper-omni
+# Install hyper terminal
+
+# ZSH
+echo -e "\033[01;32mZSH\033[0m"
+sudo apt install zsh -y
 
 sudo usermod --shell $(which zsh) $USER
 sudo usermod --shell $(which zsh) root
 
+
+echo -e "\033[01;32moh my zsh\033[0m"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+
+# install gerenciadro de plugins
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" 
+
+
 # para volatar aparecer os softwares do snap
 echo -e "emulate sh -c 'source /etc/profile'">>/etc/zsh/zprofile
 
-# install oh my zsh
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 #thema spaceship
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-# install gerenciadro de plugins
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
-
 
 # jogar config para o arquivo .zshrc
 

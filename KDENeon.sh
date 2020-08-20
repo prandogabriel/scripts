@@ -149,31 +149,6 @@ echo -e "\033[01;32mAndroid studio\033[0m"
 sudo apt-get install gcc-multilib lib32z1 lib32stdc++6
 
 
-# Install hyper terminal
-echo -e "\033[01;32mHyper terminal\033[0m"
-wget https://releases.hyper.is/download/deb
-sudo dpkg -i deb
-sudo rm -rf deb
-# setar como padrão
-sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /opt/Hyper/hyper 50
-
-# plugin para bolinhas coloridas
-hyper install hyper-custom-controls
-
-mkdir ~/.hyper_plugins/local/hyper-omni
-
-git clone https://github.com/getomni/hyper-omni ~/.hyper_plugins/local/hyper-omni
-# Install hyper terminal
-
-# ZSH
-echo -e "\033[01;32mZSH\033[0m"
-sudo apt install zsh -y
-
-echo -e "\033[01;32moh my zsh\033[0m"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" 
-
 ## Finalização, atualização e limpeza##
 echo -e "\033[01;32mFinish the installations\033[0m"
 echo -e "\033[01;32mUpdating and cleaning system\033[0m"
